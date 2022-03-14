@@ -83,22 +83,40 @@
             ]
         }
 
+
         console.log(`Title BEFORE: ${hikingBermuda.title}`)
         // Modify the title of book from "Hiking Bermuda" to "Hiking Bermuda, 20 Nature Walks and Day Hikes"
         hikingBermuda.title = "Hiking Bermuda, 20 Nature Walks and Day Hikes";
 
-        console.log(`Title AFTER: ${hikingBermuda.title}`)
+        console.log(`Title BEFORE: ${hikingBermuda.title}`)
+        // Modify the title of book from "Hiking Bermuda" to "Hiking Bermuda, 20 Nature Walks and Day Hikes"
+        hikingBermuda.title = "Hiking Bermuda, 20 Nature Walks and Day Hikes";
+
+
+        // console.log(`Title AFTER: ${hikingBermuda.title}`)
+
 
         console.log(`Publisher BEFORE: ${hikingBermuda.publisher}`);
         // Add a publisher property with "VegaNet Publications" as its value and console log it
         hikingBermuda.publisher = "VegaNet Publications";
 
-        console.log(`Publisher AFTER: ${hikingBermuda.publisher}`);
+        console.log(`Publisher BEFORE: ${hikingBermuda.publisher}`);
+        // Add a publisher property with "VegaNet Publications" as its value and console log it
+        hikingBermuda.publisher = "VegaNet Publications";
+
+
+        // console.log(`Publisher AFTER: ${hikingBermuda.publisher}`);
+
 
 
         // Change the page of the 1st chapter in the Preface section to 11 instead of 12 and console log it
         hikingBermuda.sections["0"].chapters.page = 11;
         console.log(`Section 0: Preface now starts on page: ${hikingBermuda.sections["0"].chapters.page}`)
+
+        // Change the page of the 1st chapter in the Preface section to 11 instead of 12 and console log it
+        hikingBermuda.sections["0"].chapters.page = 11;
+        console.log(`${hikingBermuda.sections["0"].chapters.page}`)
+
 
         /* Add another section property with 3 as its key and the value an object with the following properties:
             sectionName: "East End", 
@@ -107,10 +125,17 @@
         
         hikingBermuda.sections["3"] = {sectionName: 'East End'} 
         hikingBermuda.sections["3"].chapters = [{name: "Abbot's Cliff", page: 91}, {name: "St. David's Point", page: 105}, {name: "Spittal Pond", page:101}, {name: "Old Town of St. George" , page: 123}];
+
         console.log(`Added a new Section, with the name: ${hikingBermuda.sections["3"].sectionName}`)
         
         // console log the number of chapters in the newly added East End section
         console.log(`This new section has ${hikingBermuda.sections["3"].chapters.length} chapters.`)
+
+        console.log(`${hikingBermuda.sections["3"].sectionName}`)
+        
+        // console log the number of chapters in the newly added East End section
+        console.log(`${hikingBermuda.sections["3"].chapters.length}`)
+
         
 
         /* Add another trail with the following properties:
@@ -118,6 +143,7 @@
         */
         
         console.log(hikingBermuda.trails.length)
+
         hikingBermuda.trails[4] = {name: "Abbot's Cliff", page: 91, section: "East End", distanceInMiles: 1.1, rating: "Moderate"};
         console.log(hikingBermuda.trails.length)
         console.log(`${hikingBermuda.trails[4].name}`)
@@ -130,6 +156,18 @@
         // console.log(hikingBermuda.trails.find( ({ distanceInMiles }) => [4].distanceInMiles));
         // console.log(found);
         // console.log(hikingBermuda.trails[4].distanceInMiles);
+
+        hikingBermuda.trails = [{name: "Abbot's Cliff", page: 91, section: "East End", distanceInMiles: 1.1, rating: "Moderate"}];
+    
+        // console log the distance in miles of the newly added trail
+        // for (const distanceInMiles in object) {
+        //     if (Object.hasOwnProperty.call(object, distanceInMiles)) {
+        //         const element = object[distanceInMiles];
+                
+        //     }
+        // }
+        // console.log(`${hikingBermuda.trails.distanceInMiles})
+
 
         // Add a distanceInKm property to every trail with a value of what its distanceInMiles is converted to km
         // YOUR CODE GOES HERE
@@ -153,7 +191,5 @@
 
 
 </html>
-
-<!-- wtf? -->
 
 </html>
