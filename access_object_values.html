@@ -114,6 +114,17 @@
         console.log(`${hikingBermuda.trails["0"].name}`)
 
         // console log only trails that are at least than 4.0 miles
+        
+        // const greaterThanFour = hikingBermuda => hikingBermuda.trails.distanceInMiles.forEach(trail)
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].distanceInMiles > 4.0) {
+            }
+            // console.log(hikingBermuda.trails[trail].name + ' is at least 4.0 miles in length.')
+        }
+        console.log(hikingBermuda.trails.filter(({distanceInMiles}) => distanceInMiles > 4.0))
+
+        // if (hikingBermuda.trails[trail].distanceInMiles > 4){ console.log hikingBermuda.trails[trail].distanceInMiles)
+
 
 
 
@@ -126,29 +137,57 @@
         
         //    THIS DID NOT WORK EITHER
         // hikingBermuda.trails.values(distanceInMiles > 4.0) => hikingBermuda.trails.name;
-        // console.log(`${hikingBermuda.trails.if (distanceInMiles >= 4.0)}`)     
+        // console.log(`${hikingBermuda.trails.if (distanceInMiles >= 4.0)}`)
         
+        
+        // if(hikingBermuda.trails.distanceInMiles >= 4.0) {
+        //     console.log(`${hikingBermuda.trails.name}`)
+        // }
 
-        console.log(`${hikingBermuda.trails.name.if (distanceInMiles >= 4.0)}`)
+        // console.log(`${hikingBermuda.trails.name.if (distanceInMiles >= 4.0)}`)
       
 
         // console log only trails that are at most 4.0 miles
-        // YOUR CODE GOES HERE
-
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].distanceInMiles <= 4.0) {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({distanceInMiles}) => distanceInMiles <= 4.0))
+        
         // console log only trails on the West End
-        // YOUR CODE GOES HERE
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].section === "West End") {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({section}) => section === "West End"))
 
         // console log only trails on the East End
-        // YOUR CODE GOES HERE
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].section === "East End") {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({section}) => section === "East End"))
 
         // console log only moderate trails
-        // YOUR CODE GOES HERE
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].rating === "Moderate") {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Moderate"))
 
         // console log only easy trails
-        // YOUR CODE GOES HERE
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].rating === "Easy") {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Easy"))
 
         // console log only hardy trails
-        // YOUR CODE GOES HERE
+        for (let trail in hikingBermuda.trails){
+            if (hikingBermuda.trails[trail].rating === "Hardy") {
+            }
+        }
+        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Hardy"))
     </script>
 </body>
 
