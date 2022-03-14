@@ -102,92 +102,80 @@
         console.log(hikingBermuda.sections["2"].chapters.length)
 
         // console log the name of the 4th trail
-        console.log(`${hikingBermuda.trails["3"].name}`)
+        console.log(`Name of the fourth trail: ${hikingBermuda.trails["3"].name}`)
 
         // console log the page of the 3rd trail
-        console.log(`${hikingBermuda.trails["2"].name}`)
+        console.log(`Page of the book covering the third trail: ${hikingBermuda.trails["2"].page}`)
 
         // console log the section of the 2nd trail
-        console.log(`${hikingBermuda.trails["1"].name}`)
+        console.log(`Section of the second trail: ${hikingBermuda.trails["1"].section}`)
 
         // console log the rating of the 1st trail
-        console.log(`${hikingBermuda.trails["0"].name}`)
+        console.log(`Rating of the first trail: ${hikingBermuda.trails["0"].rating}`)
 
         // console log only trails that are at least than 4.0 miles
-        
-        // const greaterThanFour = hikingBermuda => hikingBermuda.trails.distanceInMiles.forEach(trail)
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].distanceInMiles > 4.0) {
+                for (let name in hikingBermuda.trails) {
+                    console.log('Trails greater than 4.0 miles: ' + hikingBermuda.trails[trail].name);
+                }
             }
-            // console.log(hikingBermuda.trails[trail].name + ' is at least 4.0 miles in length.')
         }
-        console.log(hikingBermuda.trails.filter(({distanceInMiles}) => distanceInMiles > 4.0))
-
-        // if (hikingBermuda.trails[trail].distanceInMiles > 4){ console.log hikingBermuda.trails[trail].distanceInMiles)
-
-
-
-
-        //    THIS DID NOT WORK
-        // for (let [name, distanceInMiles] in hikingBermuda.trails) {
-        //     if (hikingBermuda.trails.distanceInMiles > 4.0) {
-        //         console.log(name + ' is equal to or greater than 4.0 miles.');
-        //     }
-        // }
-        
-        //    THIS DID NOT WORK EITHER
-        // hikingBermuda.trails.values(distanceInMiles > 4.0) => hikingBermuda.trails.name;
-        // console.log(`${hikingBermuda.trails.if (distanceInMiles >= 4.0)}`)
-        
-        
-        // if(hikingBermuda.trails.distanceInMiles >= 4.0) {
-        //     console.log(`${hikingBermuda.trails.name}`)
-        // }
-
-        // console.log(`${hikingBermuda.trails.name.if (distanceInMiles >= 4.0)}`)
-      
 
         // console log only trails that are at most 4.0 miles
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].distanceInMiles <= 4.0) {
+                for (let name in hikingBermuda.trails) {
+                    console.log('Trails under 4.0 miles: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({distanceInMiles}) => distanceInMiles <= 4.0))
         
         // console log only trails on the West End
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].section === "West End") {
+                for (let section in hikingBermuda.trails) {
+                    console.log('West End trails: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({section}) => section === "West End"))
 
         // console log only trails on the East End
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].section === "East End") {
+                for (let section in hikingBermuda.trails) {
+                    console.log('Easte End trails: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({section}) => section === "East End"))
 
         // console log only moderate trails
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].rating === "Moderate") {
+                for (let rating in hikingBermuda.trails) {
+                    console.log('Trails rated moderate: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Moderate"))
 
         // console log only easy trails
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].rating === "Easy") {
+                for (let rating in hikingBermuda.trails) {
+                    console.log('Trails rated easy: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Easy"))
 
         // console log only hardy trails
         for (let trail in hikingBermuda.trails){
             if (hikingBermuda.trails[trail].rating === "Hardy") {
+                for (let rating in hikingBermuda.trails) {
+                    console.log('Trails rated hardy: ' + hikingBermuda.trails[trail].name);
+                }
             }
         }
-        console.log(hikingBermuda.trails.filter(({rating}) => rating === "Hardy"))
+
     </script>
 </body>
 
